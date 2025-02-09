@@ -71,7 +71,7 @@ const themeIconElementData = $('.roulette-theme-icon').map(function(i){
 }).get();
 
 function updateThemeIconPositions(deg){
-    const radius = ((window.innerHeight + window.innerWidth)/2)/10;
+    const radius = ((window.innerHeight + window.innerWidth)/2)/12;
 
     console.log(radius);
 
