@@ -321,31 +321,44 @@
   left: 31px;
 }
 
+.game-objective-text-container {
+  transform: rotate(-17deg) translate(455px, 20px);
+}
+
 .paragraph-3 {
   color: #fb7ec4;
-  width: 180px;
+  width: 220px;
   margin-top: -341px;
   margin-left: 542px;
   font-family: Inter, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 20px;
   position: relative;
   top: -1357px;
   left: 45px;
+
+  line-height: 30px;
+
+  text-align: center;
 }
 
 .paragraph-4 {
   color: #fb7ec4;
-  width: 250px;
+  width: 220px;
   /* margin-top: -385px; */
   margin-top: 300px;
   margin-left: 525px;
   font-family: Inter, sans-serif;
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 36px;
+  font-weight: 700;
   position: relative;
   top: -1710px;
   /* top: -010px; */
   left: 64px;
+
+  text-align: center;
+
+  line-height: 40px;
 }
 
 .body-5 {
@@ -405,7 +418,7 @@
   font-weight: 700;
   line-height: 30px;
   position: relative;
-  top: -1108px;
+  top: -1095px;
   bottom: 1104px;
   left: 104px;
 }
@@ -423,6 +436,8 @@
   position: relative;
   top: -2522px;
   left: -484px;
+
+  transform: rotate(20deg) translate(10px, -10px);
 }
 
 .body-6 {
@@ -970,7 +985,7 @@
   font-weight: 900;
   line-height: 40px;
   position: relative;
-  top: -2759px;
+  top: -2790px;
   left: 784px;
 }
 
@@ -1120,9 +1135,9 @@
   font-weight: 900;
   line-height: 50px;
   position: relative;
-  top: -477px;
+  top: -700px;
   bottom: 10px;
-  left: 762px;
+  left: 580px;
 }
 
 .div-block-15 {
@@ -1469,15 +1484,19 @@
 
   bottom: 20%;
 
-  background-color: rgb(255, 179, 0);
+  background-color: rgb(241, 119, 213);
 
   color: black;
   font-size: 18px;
+
+  cursor: default;
 }
 
-.spin-game-spin-button:hover {
+/* Hover is handled by jquery at index.js, therefore the code below was commented */
+
+/* .spin-game-spin-button:hover {
   background-color: rgb(255, 212, 112);
-}
+} */
 
 /* .slot-machine-container {
   position: absolute;
@@ -1579,9 +1598,16 @@
 
   color: white;
 
-  background-color: rgba(0,0,0,0.7);
+  /* background-color: rgba(0,0,0,0.7); */
+  background-color: black;
 
   border-radius: 10px;
+
+  cursor: none;
+}
+
+.roulette-theme-name-div {
+  cursor: none;
 }
 
 .roulette-spun-theme-popup-container {
