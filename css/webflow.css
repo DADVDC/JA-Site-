@@ -231,9 +231,10 @@ h6 {
   line-height: 18px;
   margin-top: 10px;
 }
-p {
+p,a {
   margin-top: 0;
   margin-bottom: 10px;
+  font-size:medium
 }
 blockquote {
   margin: 0 0 10px 0;
@@ -496,8 +497,9 @@ textarea.w-select {
 }
 .w-container {
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 100px;
   max-width: 940px;
+  margin-top: 50px;
 }
 .w-container:before,
 .w-container:after {
@@ -1598,7 +1600,7 @@ textarea.w-select {
   margin-right: auto;
 }
 .w-nav-link.w--current {
-  color: #0082f3;
+  color: #ffffff;
 }
 .w-nav-menu {
   position: relative;
