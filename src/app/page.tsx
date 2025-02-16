@@ -1,11 +1,21 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[url(/homepage-bg.png)] w-full h-full">
-      {/* <Image src="/homepage-bg.png" alt="background image" width={3532} height={5036}> */}
-      <h1 className="text-5xl 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-4xl text-center font-black mb-6 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">dot2dot</h1>
-      {/* </Image> */}
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-[#58C3E0] to-[#FB7EC4] w-full h-full z-10">
+      <h1 className="text-8xl md:text-[10rem] text-center font-black mb-6 bg-gradient-to-r from-[#FFFFFF] to-[#E21484] inline-block text-transparent bg-clip-text z-20 relative">
+        dot2dot
+      </h1>
+
+      <div className="absolute left-10 top-20">
+        <Image src="/home3.png" alt="Card 3" width={0} height={0} sizes="300vw" className="w-full h-auto" />
+      </div>
+      <div className="absolute right-10 top-[10rem]">
+        <Image src="/home2.png" alt="Card 2" width={0} height={0} sizes="300vw" className="w-full h-auto" />
+      </div>
+      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-1">
+        <Image src="/home1.png" alt="Card 1" width={0} height={0} sizes="300vw" className="w-full h-auto" />
+      </div>
     </section>
   );
 }
