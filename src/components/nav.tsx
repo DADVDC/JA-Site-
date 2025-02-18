@@ -37,6 +37,7 @@ export default function Nav() {
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56 shadow-md rounded-md py-2 bg-transparent drop-shadow-lg md:drop-shadow-xl">
+              <DropdownMenuItem><Link href="/about">About us</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="/game">GAME PLAY</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="/lvup">Level-up Lounge</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="/story">Story Hub</Link></DropdownMenuItem>
