@@ -27,41 +27,33 @@ export function Section({ children, ...props }: { children: React.ReactNode, [ke
 
 export default function Page() {
   return (
-    <div className="mt-[9rem]">
+    <div className="mt-[9rem] [&_*]:text-[#FB7EC4]">
       <Section>
         <div className="h-1/2 w-1/3">
-          <Card>
             <Image src="/notebook.png" alt="NoteBook" width={0} height={0} sizes="200vw" className="w-full h-auto" />
             <CardContent className="h-1/2 top-1/2 left-1/2 absolute -translate-x-1/2">
-              <h1 className='text-lg md:text-5xl w-full h-full font-black'>
+              <h1 className='text-lg md:text-4xl w-full h-full font-black'>
                 Braille Tutorial
               </h1>
             </CardContent>
-          </Card>
         </div>
       </Section>
       <Section>
         <div className="h-1/2 w-1/3">
-          <Card>
             <Image src="/notebook.png" alt="NoteBook" width={0} height={0} sizes="200vw" className="w-full h-auto" />
             <CardContent className="h-1/2 top-1/2 left-1/2 absolute -translate-x-1/2">
               <h1 className='text-2xl md:text-6xl w-full h-full font-black'>
                 Flashcard
               </h1>
             </CardContent>
-          </Card>
         </div>
       </Section>
       <Section>
         <div className="h-1/2 w-1/3">
-          <Card>
-            <Image src="/notebook.png" alt="NoteBook" width={0} height={0} sizes="200vw" className="w-full h-auto" />
             <CardContent className="h-1/2 top-1/2 left-1/2 absolute -translate-x-1/2">
-              <h1 className='text-2xl md:text-6xl w-full h-full font-black'>
-                Video 
-              </h1>
+              <iframe width="900" height="700" src="https://www.youtube.com/embed/8UfhIZfkWUA?si=TPszN-edRXBtWWvK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen/>
+
             </CardContent>
-          </Card>
         </div>
       </Section>
     </div>

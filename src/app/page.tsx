@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <section className="relative min-h-screen flex items-center justify-center w-full h-full z-10">
-      <h1 className="text-8xl md:text-[10rem] text-center font-black mb-6 bg-gradient-to-r from-[#FFFFFF] to-[#E21484] inline-block text-transparent bg-clip-text z-20 relative">
+      <h1 className="text-8xl md:text-[12rem] text-center font-black mb-6 bg-gradient-to-r from-[#FFFFFF] to-[#E21484] inline-block text-transparent bg-clip-text z-20 relative">
         dot2dot
       </h1>
 
