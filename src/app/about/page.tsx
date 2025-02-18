@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Page() {
   return (
   <div className="overflow-hidden">
@@ -12,16 +10,13 @@ export default function Page() {
       </p>
       <div className="items-center flex justify-center self-center z-10">
         <div className="absolute left-1/4 transform -translate-x-1/2 bottom-20 md:bottom-44">
-          <Image src="/about1.png" alt="About Card 1"      style={{
-        width: '100%',
-        height: 'auto',
-      }} width={200} height={200} sizes="225vw" className="w-full h-auto hover:rotate-6 transition-all duration-500" />
+          <img src="/about1.png" alt="About Card 1" sizes="225vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:rotate-6 transition-all duration-500" />
         </div>
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-20 md:bottom-[15rem]">
-          <Image src="/about2.png" alt="About Card 2" width={0} height={0} sizes="225vw" className="w-full h-auto hover:-translate-y-4 transition-all duration-500" />
+        <div className="absolute left-1/2 transform -translate-x-1/4 bottom-20 md:bottom-[15rem]">
+          <img src="/about2.png" alt="About Card 2" sizes="225vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-translate-y-4 transition-all duration-500" />
         </div>
-        <div className="absolute right-0 transform -translate-x-1/2 bottom-20 md:bottom-44">
-          <Image src="/about3.png" alt="About Card 3" width={0} height={0} sizes="225vw" className="w-full h-auto hover:-rotate-6 transition-all duration-500" />
+        <div className="absolute right-1/4 transform translate-x-full bottom-20 md:bottom-44">
+          <img src="/about3.png" alt="About Card 3" sizes="225vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-rotate-6 transition-all duration-500" />
         </div>
       </div>
       {/* <div className="absolute left-1/2 transform -translate-x-1/2 md:bottom-32 max-md:hidden"> */}
@@ -41,8 +36,8 @@ export default function Page() {
           </p>
       </div>
       <div className="w-1/3 h-1/2">
-        <Image src="/about4.png" alt="About Card 4" width={0} height={0} sizes="100vw" className="w-full h-auto" />
-        <Image src="/Rectangle2.png" alt="Rectangle 2" width={0} height={0} sizes="75vw" className="w-full h-auto bottom-24" />
+        <img src="/about4.png" alt="About Card 4" width={0} height={0} sizes="100vw" className="w-full h-auto" />
+        <img src="/Rectangle2.png" alt="Rectangle 2" width={0} height={0} sizes="75vw" className="w-full h-auto bottom-24" />
       </div>
     </section>
   </div>
