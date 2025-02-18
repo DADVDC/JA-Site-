@@ -27,7 +27,7 @@ export function Section({ children, ...props }: { children: React.ReactNode, [ke
 
 export default function Page() {
   return (
-    <div className="mt-[9rem] [&_*]:text-[#FB7EC4]">
+    <div className="[&_*]:text-[#FB7EC4]">
       <Section>
         <div className="h-1/2 w-1/3">
             <Image src="/notebook.png" alt="NoteBook" width={0} height={0} sizes="200vw" className="w-full h-auto" />
