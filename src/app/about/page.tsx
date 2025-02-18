@@ -7,12 +7,15 @@ export default function Page() {
       <h1 className="text-8xl md:text-[9rem] text-center font-black">
         Our Mission
       </h1>
-      <p className="md:text-4xl text-center w-2/3 z-20">
+      <p className="text-xl md:text-4xl text-center w-2/3 z-20">
         To foster a community that encourages inclusiveness through raising awareness of the day-to-day realities faced by the visually impaired. Through a braille-based game, we connect the sighted with the visually impaired with a common language, developing empathy through shared experiences. 
       </p>
       <div className="items-center flex justify-center self-center z-10">
         <div className="absolute left-1/4 transform -translate-x-1/2 bottom-20 md:bottom-44">
-          <Image src="/about1.png" alt="About Card 1" width={0} height={0} sizes="225vw" className="w-full h-auto hover:rotate-6 transition-all duration-500" />
+          <Image src="/about1.png" alt="About Card 1"      style={{
+        width: '100%',
+        height: 'auto',
+      }} width={200} height={200} sizes="225vw" className="w-full h-auto hover:rotate-6 transition-all duration-500" />
         </div>
         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-20 md:bottom-[15rem]">
           <Image src="/about2.png" alt="About Card 2" width={0} height={0} sizes="225vw" className="w-full h-auto hover:-translate-y-4 transition-all duration-500" />
