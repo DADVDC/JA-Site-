@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import {
   CardContent,
 } from "@/components/ui/card"
@@ -10,9 +9,9 @@ export default function Page() {
     <div className="[&_*]:text-[#FB7EC4]">
       <Section>
         <div className="h-1/2 w-1/3">
-            <Image src="/notebook.png" alt="NoteBook" width={0} height={0} sizes="200vw" className="w-full h-auto" />
+            <img src="/notebook.png" alt="NoteBook" className="h-full w-full" />
             <CardContent className="h-1/2 top-1/2 left-1/2 absolute -translate-x-1/2">
-              <h1 className='text-lg md:text-4xl w-full h-full font-black'>
+              <h1 className='text-sm md:text-4xl w-full h-full font-black'>
                 Braille Tutorial
               </h1>
             </CardContent>
@@ -20,7 +19,7 @@ export default function Page() {
       </Section>
       <Section>
         <div className="h-1/2 w-1/3">
-            <Image src="/notebook.png" alt="NoteBook" width={0} height={0} sizes="200vw" className="w-full h-auto" />
+            <img src="/notebook.png" alt="NoteBook" className="h-full w-full" />
             <CardContent className="h-1/2 top-1/2 left-1/2 absolute -translate-x-1/2">
               <h1 className='text-2xl md:text-6xl w-full h-full font-black'>
                 Flashcard
