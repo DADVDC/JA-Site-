@@ -49,11 +49,7 @@ export default function Page() {
         </div>
       </Section>
       <Section>
-        <div className="h-1/2 w-1/3">
-            <CardContent className="h-1/2 top-1/2 left-1/2 absolute -translate-x-1/2">
-              <iframe width="900" height="700" src="https://www.youtube.com/embed/8UfhIZfkWUA?si=TPszN-edRXBtWWvK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
-            </CardContent>
-        </div>
+        <iframe className="h-1/2 top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-1/2" width="900" height="700" src="https://www.youtube.com/embed/8UfhIZfkWUA?si=TPszN-edRXBtWWvK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
       </Section>
     </div>
   )
