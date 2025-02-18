@@ -28,7 +28,7 @@ export default function Page() {
 
     <section className="relative min-h-screen flex items-center justify-center w-full h-full">
       <div className="w-1/2 flex flex-col items-center justify-center content-center">
-          <h1 className="font-black text-4xl md:text-7xl">
+          <h1 className="font-black text-4xl md:text-7xl text-center">
             Our product
           </h1>
           <p className="md:text-4xl text-center mt-6 w-2/3">
