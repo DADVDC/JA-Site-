@@ -1,4 +1,4 @@
-import Section from "../lvup/page"
+import Section from "@/components/Section"
 
 export default function Page() {
   return (
