@@ -11,8 +11,9 @@ import {
 export default function Nav() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 mt-10 min-h-16 inset-shadow-2xs px-4 md:px-[50px] bg-transparent drop-shadow-lg flex flex-1 items-center justify-between 2xl:[&_*]:text-5xl md:text-3xl backdrop-blur-xl">
-      <Link href="/about">About us</Link>
+      <Link href="/">Home</Link>
       <div className="hidden md:flex space-x-10 flex-1 ml-10">
+        <Link href="/about">About us</Link>
         <Link href="/game">GAME PLAY</Link>
         <Link href="/lvup">Level-up Lounge</Link>
         <Link href="/story">Story Hub</Link>
