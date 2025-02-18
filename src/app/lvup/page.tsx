@@ -21,9 +21,13 @@ export default function Page() {
         <div className="h-1/2 w-1/3">
             <img src="/notebook.png" alt="NoteBook" className="h-full w-full" />
             <CardContent className="h-1/2 top-1/2 left-1/2 absolute -translate-x-1/2">
-              <h1 className='text-2xl md:text-6xl w-full h-full font-black'>
+              <p>
+                click to try it
+              </p>
+
+              <a className='text-2xl md:text-6xl w-full h-full font-black' href="https://quizlet.com/747915909/braille-flash-cards/?funnelUUID=ad824b45-15ed-46ca-b6fa-dbd973cf7e4a">
                 Flashcard
-              </h1>
+              </a>
             </CardContent>
         </div>
       </Section>
