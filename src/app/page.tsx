@@ -9,7 +9,7 @@ export default function Home() {
         <img src="/home3.png" alt="Card 3" className="w-1/2 md:max-w-1/2 h-auto" />
       </div>
       <div className="absolute max-md:left-72 top-[10rem]">
-        <img src="/home2.png" alt="Card 2" className="max-md:w-96 max-w-1/2 h-auto max-md:h-40" />
+        <img src="/home2.png" alt="Card 2" className="max-md:w-[25rem] max-w-1/2 h-auto max-md:h-40" />
       </div>
       <div className="absolute left-1/2 transform -translate-x-1/2 bottom-1 max-md:bottom-52">
         <img src="/home1.png" alt="Card 1" className="h-1/2 w-full md:max-w-full" />
