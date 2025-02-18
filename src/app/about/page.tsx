@@ -9,13 +9,13 @@ export default function Page() {
         To foster a community that encourages inclusiveness through raising awareness of the day-to-day realities faced by the visually impaired. Through a braille-based game, we connect the sighted with the visually impaired with a common language, developing empathy through shared experiences. 
       </p>
       <div className="items-center flex justify-center self-center z-10">
-        <div className="absolute left-1/4 transform -translate-x-1/2 bottom-20 md:bottom-44">
+        <div className="absolute left-1/4 transform -translate-x-1/2 bottom-0 md:bottom-44">
           <img src="/about1.png" alt="About Card 1" sizes="225vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:rotate-6 transition-all duration-500" />
         </div>
-        <div className="absolute left-1/2 transform -translate-x-1/4 bottom-20 md:bottom-[15rem]">
+        <div className="absolute left-1/2 transform -translate-x-1/4 bottom-0 md:bottom-[15rem]">
           <img src="/about2.png" alt="About Card 2" sizes="225vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-translate-y-4 transition-all duration-500" />
         </div>
-        <div className="absolute right-1/4 transform translate-x-full bottom-20 md:bottom-44">
+        <div className="absolute right-1/4 transform translate-x-full bottom-0 md:bottom-44">
           <img src="/about3.png" alt="About Card 3" sizes="225vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-rotate-6 transition-all duration-500" />
         </div>
       </div>
@@ -23,7 +23,7 @@ export default function Page() {
         {/* <Image src="/Rectangle.png" alt="Rectangle" width={0} height={0} sizes="200vw" className="w-full h-auto max-md:hidden object-cover" /> */}
       {/* </div> */}
       {/* <div className="w-full bg-gradient-to-r from-[#ff9eb6] via-[#d4a5ff] to-[#87CEEB] h-10" /> */}
-      <div className="absolute h-64 w-full bg-gradient-to-r from-pink-300 via-purple-200 to-blue-300 rounded-t-full scale-x-105 transform bottom-32 overflow-hidden" />
+      <div className="absolute h-64 w-full bg-gradient-to-r from-pink-300 via-purple-200 to-blue-300 rounded-t-full scale-x-105 transform bottom-0 md:bottom-32 overflow-hidden" />
     </section>
 
     <section className="relative min-h-screen flex items-center justify-center w-full h-full">
