@@ -3,21 +3,21 @@ import Image from "next/image";
 export default function Page() {
   return (
   <div>
-    <section className="relative min-h-screen flex flex-col items-center justify-start w-full h-full">
+    <section className="relative min-h-screen flex flex-col items-center justify-start w-full h-full z-10">
       <h1 className="text-8xl md:text-[10rem] text-center font-black mt-[9rem]">
         Our Mission
       </h1>
-      <p className="md:text-4xl text-center mt-6 w-2/3">
+      <p className="md:text-4xl text-center w-2/3 z-20">
         To foster a community that encourages inclusiveness through raising awareness of the day-to-day realities faced by the visually impaired. Through a braille-based game, we connect the sighted with the visually impaired with a common language, developing empathy through shared experiences. 
       </p>
       <div className="items-center flex justify-center self-center">
-        <div className="absolute left-1/4 transform -translate-x-1/2 bottom-20 md:bottom-56">
+        <div className="absolute left-1/4 transform -translate-x-1/2 bottom-20 md:bottom-52">
           <Image src="/about1.png" alt="About Card 1" width={0} height={0} sizes="200vw" className="w-full h-auto" />
         </div>
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-20 md:bottom-64">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-20 md:bottom-56">
           <Image src="/about2.png" alt="About Card 2" width={0} height={0} sizes="200vw" className="w-full h-auto" />
         </div>
-        <div className="absolute right-0 transform -translate-x-1/2 bottom-20 md:bottom-56">
+        <div className="absolute right-0 transform -translate-x-1/2 bottom-20 md:bottom-52">
           <Image src="/about3.png" alt="About Card 3" width={0} height={0} sizes="200vw" className="w-full h-auto" />
         </div>
       </div>
