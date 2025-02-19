@@ -11,7 +11,7 @@ export default function Page() {
         <div className="h-1/2 w-1/3">
             <img src="/notebook.png" alt="NoteBook" className="h-full w-full" />
             <CardContent className="h-1/2 top-1/2 left-1/2 absolute -translate-x-1/2">
-              <h1 className='text-sm md:text-4xl w-full h-full font-black'>
+              <h1 className='text-xl md:text-6xl w-20 md:w-60 h-full font-black text-center'>
                 Braille Tutorial
               </h1>
             </CardContent>
