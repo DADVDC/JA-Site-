@@ -5,7 +5,7 @@ export default function Page() {
       <h1 className="text-8xl md:text-[9rem] text-center font-black">
         Our Mission
       </h1>
-      <p className="text-xl md:text-4xl text-center w-2/3 z-20">
+      <p className="text-xl md:text-4xl text-center w-2/3 max-md:w-3/4 z-20">
         To foster a community that encourages inclusiveness through raising awareness of the day-to-day realities faced by the visually impaired. Through a braille-based game, we connect the sighted with the visually impaired with a common language, developing empathy through shared experiences. 
       </p>
       <div className="items-center flex justify-center self-center z-10">
