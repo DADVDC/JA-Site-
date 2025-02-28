@@ -1,5 +1,6 @@
 import { HTMLAttributes } from 'react'
 
+
 export default function Section({ children, ...props }: HTMLAttributes<HTMLElement> & { children: React.ReactNode }) {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center w-full h-full" {...props}>
