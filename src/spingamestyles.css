@@ -365,8 +365,8 @@
     z-index: 100;
 
     /* ADJUST THESE TWO PROPERTIES (POSITIONING) */
-    top: 0vh;
-    left: 35vw;
+    top: -42vh;
+    left: 3vw;
 
   }
 
@@ -377,9 +377,9 @@
       height: 35vh;
       aspect-ratio: 5/7;
 
-      left: 30vw;
+      left: -2vw;
 
-      top: -30vh;
+      top: -40vh;
   
     }
   }

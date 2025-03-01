@@ -121,17 +121,17 @@ Players spell words related to the theme using the same rules as Levels 1 & 2.
         </div>
       </Section>
       <Section>
-        <div className="h-1/2 w-1/3">
+        <div className="h-4/5 w-3/4 md:h-3/4 md:w-1/2">
             <img src="/notebook.png" alt="NoteBook" className="h-full w-full" />
-            <CardContent className="h-1/2 top-1/3 left-1/2 absolute -translate-x-1/2">
-              <h1 className='text-xl md:text-6xl w-20 md:w-60 h-full font-black text-center'>
-Choose your  theme here ！
+            <CardContent className="h-1/2 mt-[-360px] md:mt-[-850px] left-1/2 absolute -translate-x-1/2">
+              <h1 className='text-sm md:text-5xl w-40 md:w-[500px] h-full font-black text-center'>
+Choose your  theme here！
               </h1>
+              <SpinGame></SpinGame>
             </CardContent>
         </div>
       </Section>
 
-      <SpinGame></SpinGame>
     </div>
   )
 }
