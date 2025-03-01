@@ -5,11 +5,11 @@ import React, { useEffect } from 'react';
 
 import '../spingamestyles.css';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 
-import spinGameRouletteImg from '../images/spin-game-roulette.png';
-import spinGameArrowImg from '../images/spin-game-arrow.png';
-import spinGameStarImg from '../images/spin-game-star.png';
+// import spinGameRouletteImg from '../images/spin-game-roulette.png';
+// import spinGameArrowImg from '../images/spin-game-arrow.png';
+// import spinGameStarImg from '../images/spin-game-star.png';
 
 // import spinGameStarRealImg from './spin-game-star.png';
 
@@ -104,9 +104,6 @@ function updateThemeIconPositions(deg:number){
     //     return;
     // }
 
-    console.log("updating theme icon positions - theme icon element data:")
-    console.log(themeIconElementData);
-
     for (let i = 0; i < themeIconElementData.length; i++){
         const spinGameStar = $('.spin-game-star');
 
@@ -122,8 +119,8 @@ function updateThemeIconPositions(deg:number){
         // Updated now it does not :)
         const centerY = spinGameStarPos.top + (spinGameStarHeight / 2);
 
-        const themeIconWidth = themeIconElementData[i].outerWidth();
-        const themeIconHeight = themeIconElementData[i].outerHeight();
+        const themeIconWidth = themeIconElementData[i].outerWidth() as number;
+        const themeIconHeight = themeIconElementData[i].outerHeight() as number;
 
 
 
@@ -149,6 +146,8 @@ function updateThemeIconPositions(deg:number){
         // themeIconElementData[i].offset({top: spinGameStarPos.top + yOffset, left: spinGameStarPos.left + xOffset});
     }
 }
+
+// const [currentRouletteWheelDeg, setCurrentRouletteWheelDeg] = useState(0);
 
 let currentRouletteWheelDeg = 0;
 
@@ -180,15 +179,15 @@ let currentRouletteWheelDeg = 0;
 //     return 0;
 // }
 
-const ff = function(){
-    console.log("lol");
+// const ff = function(){
+//     console.log("lol");
 
-}
+// }
 
 
 const handleSpinButtonClick = function(this:HTMLElement){
 
-    console.log("hoi");
+    // console.log("hoi");
 
     if ($('.spin-game-roulette').data('spinning')){
         // alert("Please wait until the roulette is done spinning.");
@@ -206,7 +205,8 @@ const handleSpinButtonClick = function(this:HTMLElement){
 
     $('.spin-game-roulette').animate({now: '+=1'}, {
         duration:10000*Math.random(),
-        step: function(now:number,fx:JQuery.Tween<HTMLElement>) {
+        // step: function(now:number,fx:JQuery.Tween<HTMLElement>) {
+        step: function() {
             unadjustedCurrentSpeed += 10000*Math.random();
 
             currentSpeed = Math.log(unadjustedCurrentSpeed);
@@ -224,7 +224,8 @@ const handleSpinButtonClick = function(this:HTMLElement){
 
     $('.spin-game-roulette').animate({now: '+=1'}, {
         duration:18000*Math.random(),
-        step: function(now:number,fx:JQuery.Tween<HTMLElement>) {
+        // step: function(now:number,fx:JQuery.Tween<HTMLElement>) {
+        step: function() {
             currentSpeed *= 0.985 + Math.random()*0.01;
 
             $('.spin-game-roulette').css('transform','rotate('+(currentSpeed + currentRouletteWheelDeg)+'deg)');
@@ -388,7 +389,7 @@ export default function SpinGame() {
 
     $('.roulette-theme-name-div').hide();
 
-    console.log("hi");
+    // console.log("hi");
 
     $(document).on('mousemove', function(e:JQuery.MouseMoveEvent){
         const offset = $('.bg-black-container').offset();
@@ -430,9 +431,6 @@ export default function SpinGame() {
   
       return jqueryObj;
     }).get();
-
-    console.log("theme icon element data immedietely after mapping:")
-    console.log(themeIconElementData);
   
     // function updateThemeIconPositions(deg:number){
     //     const radius = ((window.innerHeight + window.innerWidth)/2)/12;
@@ -482,7 +480,7 @@ export default function SpinGame() {
     //     }
     // }
     
-    let currentRouletteWheelDeg = 0;
+    // let currentRouletteWheelDeg = 0;
     
     updateThemeIconPositions(currentRouletteWheelDeg);
     
@@ -490,31 +488,30 @@ export default function SpinGame() {
         updateThemeIconPositions(currentRouletteWheelDeg);
     })
     
-    function getCurrentRotation(el:HTMLElement){
-        const st = window.getComputedStyle(el, null);
-        const tm = st.getPropertyValue("-webkit-transform") ||
-                st.getPropertyValue("-moz-transform") ||
-                st.getPropertyValue("-ms-transform") ||
-                st.getPropertyValue("-o-transform") ||
-                st.getPropertyValue("transform") ||
-                "none";
-        if (tm != "none") {
-          const values:string[] = tm.split('(')[1].split(')')[0].split(',');
-          /*
-          a = values[0];
-          b = values[1];
-          angle = Math.round(Math.atan2(b,a) * (180/Math.PI));
-          */
-          //return Math.round(Math.atan2(values[1],values[0]) * (180/Math.PI)); //this would return negative values the OP doesn't wants so it got commented and the next lines of code added
-          const angle = Math.round(Math.atan2(parseFloat(values[1]),parseFloat(values[0])) * (180/Math.PI));
-          return (angle < 0 ? angle + 360 : angle); //adding 360 degrees here when angle < 0 is equivalent to adding (2 * Math.PI) radians before
-        }
-        return 0;
-      }
+    // function getCurrentRotation(el:HTMLElement){
+    //     const st = window.getComputedStyle(el, null);
+    //     const tm = st.getPropertyValue("-webkit-transform") ||
+    //             st.getPropertyValue("-moz-transform") ||
+    //             st.getPropertyValue("-ms-transform") ||
+    //             st.getPropertyValue("-o-transform") ||
+    //             st.getPropertyValue("transform") ||
+    //             "none";
+    //     if (tm != "none") {
+    //       const values:string[] = tm.split('(')[1].split(')')[0].split(',');
+    //       /*
+    //       a = values[0];
+    //       b = values[1];
+    //       angle = Math.round(Math.atan2(b,a) * (180/Math.PI));
+    //       */
+    //       //return Math.round(Math.atan2(values[1],values[0]) * (180/Math.PI)); //this would return negative values the OP doesn't wants so it got commented and the next lines of code added
+    //       const angle = Math.round(Math.atan2(parseFloat(values[1]),parseFloat(values[0])) * (180/Math.PI));
+    //       return (angle < 0 ? angle + 360 : angle); //adding 360 degrees here when angle < 0 is equivalent to adding (2 * Math.PI) radians before
+    //     }
+    //     return 0;
+    //   }
     
     
     // $(document).ready(function(){
-    console.log("hey");
 
     
     
@@ -596,10 +593,16 @@ export default function SpinGame() {
                     <img className="spin-game-star z-1000" src={spinGameStarImg} alt="star"/>
                     <img className="spin-game-arrow z-1000" src={spinGameArrowImg} alt="arrow"/> */}
 
+                    {/* <Image className="spin-game-roulette z-1000" src={spinGameRouletteImg} alt="roulette wheel"/>
+                    <Image className="spin-game-star z-1000" src={spinGameStarImg} alt="star"/>
+                    <Image className="spin-game-arrow z-1000" src={spinGameArrowImg} alt="arrow"/> */}
+
                     {/* <div className="responsive-image-wrapper"> */}
-                    <Image className="spin-game-roulette" src={spinGameRouletteImg} alt="roulette wheel"/>
-                    <Image className="spin-game-star" src={spinGameStarImg} alt="star"/>
-                    <Image className="spin-game-arrow" src={spinGameArrowImg} alt="arrow"/>
+
+                    <img className="spin-game-roulette" src="/spin-game-roulette.png" alt="roulette wheel"/>
+                    <img className="spin-game-star" src="/spin-game-star.png" alt="star"/>
+                    <img className="spin-game-arrow" src="/spin-game-arrow.png" alt="arrow"/>
+
                     {/* </div> */}
 
                     <p className="roulette-theme-icon z-1001"></p>
