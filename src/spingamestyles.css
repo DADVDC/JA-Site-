@@ -142,7 +142,7 @@
   @media (orientation: portrait) {
     .slot-machine-container {
       width: auto;
-      height: 50vh;
+      height: 30vh;
       aspect-ratio: 5/6;
     }
   }
@@ -350,9 +350,9 @@
   .bg-black-container {
 
     /* COMMENT THIS: */
-    background-color: rgba(0, 0, 0, 0.275);
+    /* background-color: rgba(0, 0, 0, 0.275); */
     /* UNCOMMENT THIS: */
-    /* background-color: transparent; */
+    background-color: transparent;
   
     position: absolute;
 
@@ -374,10 +374,10 @@
     .bg-black-container {
 
       width: auto;
-      height: 52vh;
+      height: 35vh;
       aspect-ratio: 5/7;
 
-      left: 15vw;
+      left: 30vw;
 
       top: -30vh;
   
