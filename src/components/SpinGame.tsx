@@ -93,19 +93,20 @@ let themeIconElementData: JQuery<HTMLElement>[];
 // }).get();
 
 function updateThemeIconPositions(deg:number){
-    const radius = ((window.innerHeight + window.innerWidth)/2)/12;
+    const spinGameStar = $('.spin-game-star');
+
+    const radius = (spinGameStar.width())/3;
+    
 
     // console.log(radius);
 
     // console.log(themeIconElementData);
     
-    // // Fixing the Bug by Ignoring it?
-    // if (themeIconElementData === undefined){
-    //     return;
-    // }
+    if (themeIconElementData === undefined){
+        generateThemeIconElements();
+    }
 
     for (let i = 0; i < themeIconElementData.length; i++){
-        const spinGameStar = $('.spin-game-star');
 
         const spinGameStarPos = spinGameStar.position();
 
@@ -145,6 +146,41 @@ function updateThemeIconPositions(deg:number){
 
         // themeIconElementData[i].offset({top: spinGameStarPos.top + yOffset, left: spinGameStarPos.left + xOffset});
     }
+}
+
+function generateThemeIconElements(){
+    themeIconElementData = $('.roulette-theme-icon').map(function(this:HTMLElement, i:number){
+        this.innerHTML = rouletteThemeIconData[i];
+    
+        const jqueryObj = $(this);
+    
+        jqueryObj.on('mouseenter', function(){
+    
+            // $('.roulette-theme-name-div').show();
+            // $('.roulette-theme-name-div').text(rouletteThemeNameData[i]);
+            // console.log("showing");
+            clearTimeout(timeout); // Clear any existing timeout
+            // $('.roulette-theme-name-div').stop(true, true).fadeIn(200); // Show the element with fade effect
+            $('.roulette-theme-name-div').stop(true, true).show();
+            $('.roulette-theme-name-div').text(rouletteThemeNameData[i]);
+            $(".roulette-theme-name-div").width(0);
+            $(".roulette-theme-name-div").width( $(".roulette-theme-name-div")[0].scrollWidth);
+            $(".roulette-theme-name-div").height(0);
+            $(".roulette-theme-name-div").height( $(".roulette-theme-name-div")[0].scrollHeight);
+            // console.log("showing");
+    
+        }).on('mouseleave', function(){
+            // console.log("hiding");
+            // $('.roulette-theme-name-div').hide();
+            timeout = setTimeout(function() {
+                // $('.roulette-theme-name-div').stop(true, true).fadeOut(200); // Hide the element with fade effect
+                $('.roulette-theme-name-div').stop(true, true).hide();
+                // console.log("hiding");
+            }, 400); // Delay the hide to allow for potential mouse enter
+        })
+    
+        return jqueryObj;
+      }).get();
 }
 
 // const [currentRouletteWheelDeg, setCurrentRouletteWheelDeg] = useState(0);
@@ -399,38 +435,40 @@ export default function SpinGame() {
     });
 
 
-    themeIconElementData = $('.roulette-theme-icon').map(function(this:HTMLElement, i:number){
-      this.innerHTML = rouletteThemeIconData[i];
+    // themeIconElementData = $('.roulette-theme-icon').map(function(this:HTMLElement, i:number){
+    //   this.innerHTML = rouletteThemeIconData[i];
   
-      const jqueryObj = $(this);
+    //   const jqueryObj = $(this);
   
-      jqueryObj.on('mouseenter', function(){
+    //   jqueryObj.on('mouseenter', function(){
   
-          // $('.roulette-theme-name-div').show();
-          // $('.roulette-theme-name-div').text(rouletteThemeNameData[i]);
-          // console.log("showing");
-          clearTimeout(timeout); // Clear any existing timeout
-          // $('.roulette-theme-name-div').stop(true, true).fadeIn(200); // Show the element with fade effect
-          $('.roulette-theme-name-div').stop(true, true).show();
-          $('.roulette-theme-name-div').text(rouletteThemeNameData[i]);
-          $(".roulette-theme-name-div").width(0);
-          $(".roulette-theme-name-div").width( $(".roulette-theme-name-div")[0].scrollWidth);
-          $(".roulette-theme-name-div").height(0);
-          $(".roulette-theme-name-div").height( $(".roulette-theme-name-div")[0].scrollHeight);
-          // console.log("showing");
+    //       // $('.roulette-theme-name-div').show();
+    //       // $('.roulette-theme-name-div').text(rouletteThemeNameData[i]);
+    //       // console.log("showing");
+    //       clearTimeout(timeout); // Clear any existing timeout
+    //       // $('.roulette-theme-name-div').stop(true, true).fadeIn(200); // Show the element with fade effect
+    //       $('.roulette-theme-name-div').stop(true, true).show();
+    //       $('.roulette-theme-name-div').text(rouletteThemeNameData[i]);
+    //       $(".roulette-theme-name-div").width(0);
+    //       $(".roulette-theme-name-div").width( $(".roulette-theme-name-div")[0].scrollWidth);
+    //       $(".roulette-theme-name-div").height(0);
+    //       $(".roulette-theme-name-div").height( $(".roulette-theme-name-div")[0].scrollHeight);
+    //       // console.log("showing");
   
-      }).on('mouseleave', function(){
-          // console.log("hiding");
-          // $('.roulette-theme-name-div').hide();
-          timeout = setTimeout(function() {
-              // $('.roulette-theme-name-div').stop(true, true).fadeOut(200); // Hide the element with fade effect
-              $('.roulette-theme-name-div').stop(true, true).hide();
-              // console.log("hiding");
-          }, 400); // Delay the hide to allow for potential mouse enter
-      })
+    //   }).on('mouseleave', function(){
+    //       // console.log("hiding");
+    //       // $('.roulette-theme-name-div').hide();
+    //       timeout = setTimeout(function() {
+    //           // $('.roulette-theme-name-div').stop(true, true).fadeOut(200); // Hide the element with fade effect
+    //           $('.roulette-theme-name-div').stop(true, true).hide();
+    //           // console.log("hiding");
+    //       }, 400); // Delay the hide to allow for potential mouse enter
+    //   })
   
-      return jqueryObj;
-    }).get();
+    //   return jqueryObj;
+    // }).get();
+
+    generateThemeIconElements();
   
     // function updateThemeIconPositions(deg:number){
     //     const radius = ((window.innerHeight + window.innerWidth)/2)/12;
@@ -605,21 +643,21 @@ export default function SpinGame() {
 
                     {/* </div> */}
 
-                    <p className="roulette-theme-icon z-1001"></p>
-                    <p className="roulette-theme-icon z-1001"></p>
-                    <p className="roulette-theme-icon z-1001"></p>
-                    <p className="roulette-theme-icon z-1001"></p>
-                    <p className="roulette-theme-icon z-1001"></p>
-                    <p className="roulette-theme-icon z-1001"></p>
-                    <p className="roulette-theme-icon z-1001"></p>
-                    <p className="roulette-theme-icon z-1001"></p>
-                    <p className="roulette-theme-icon z-1001"></p>
-                    <p className="roulette-theme-icon z-1001"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
+                    <p className="roulette-theme-icon z-1001 text-lg sm:text-xl md:text-4xl"></p>
 
                 </div>
 
                 <div className="slot-machine-container-lower z-1000">
-                    <button className="spin-game-spin-button z-1000" onClick={handleSpinButtonClick}>SPIN</button>
+                    <button className="spin-game-spin-button z-1000 6px text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl" onClick={handleSpinButtonClick}>SPIN</button>
                     {/* <button onClick={ff}>HAOIFH</button> */}
                 </div>
 
@@ -639,7 +677,7 @@ export default function SpinGame() {
                     </button>
                 </div>
 
-                <div className="roulette-spun-theme-popup-lower">
+                <div className="roulette-spun-theme-popup-lower text-4xl sm:text-9xl md:text-9xl lg:text-9xl xl:text-6xl">
                     Seasons
                 </div>
             </div>

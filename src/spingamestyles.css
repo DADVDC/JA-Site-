@@ -96,7 +96,7 @@
     background-color: rgb(241, 119, 213);
   
     color: black;
-    font-size: 18px;
+    /* font-size: 18px; */
   
     cursor: default;
   }
@@ -128,13 +128,23 @@
   
     /* Fine. We're gonna make this project NOT scale according to screen size because of the webflow design using px. dammit. */
     width: 30vw;
-    height: 60vh;
+    /* height: 60vh; */
+    height: auto;
+    aspect-ratio: 5/6;
   
     left: auto;
     right: auto;
     top: 2vh;
   
     border-radius: 15px;
+  }
+
+  @media (orientation: portrait) {
+    .slot-machine-container {
+      width: auto;
+      height: 50vh;
+      aspect-ratio: 5/6;
+    }
   }
   
   .slot-machine-container-upper, .slot-machine-container-lower {
@@ -190,12 +200,12 @@
     aspect-ratio: 1 / 1;
   
     width: 10%;
-    max-height: 100%;
+    /* max-height: 100%; */
   
     /* left: 48%;
     top: 48%; */
   
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
   
     text-align: center;
   
@@ -244,6 +254,18 @@
 
     z-index: 10000000000;
   }
+
+
+  @media (orientation: portrait) {
+    .roulette-spun-theme-popup-container {
+
+      margin-left: -50vw;
+
+      width: 80vw;
+  
+    }
+  }
+
   
   .roulette-spun-theme-popup-upper {
     position: relative;
@@ -313,7 +335,7 @@
   
     text-align: center;
   
-    font-size: 3rem;
+    /* font-size: 3rem; */
   
     font-family: 'Quicksand', sans-serif;
   
@@ -333,8 +355,11 @@
     /* background-color: transparent; */
   
     position: absolute;
+
+    aspect-ratio: 5/6;
   
-    height: 62vh;
+    /* height: 62vh; */
+    height: auto;
     width: 30vw;
 
     z-index: 100;
@@ -343,4 +368,16 @@
     top: 200vh;
     left: 35vw;
 
+  }
+
+  @media (orientation: portrait) {
+    .bg-black-container {
+
+      width: auto;
+      height: 52vh;
+      aspect-ratio: 5/7;
+
+      left: 15vw;
+  
+    }
   }
