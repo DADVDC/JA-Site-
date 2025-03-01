@@ -6,7 +6,6 @@ import SpinGame from "@/components/SpinGame"
 export default function Page() {
   return (
     <div className="[&_*]:text-[#FB7EC4]">
-      <SpinGame></SpinGame>
 
       <Section>
         <div className="md:h-1/2 md:w-1/3 max-md:h-full max-md:w-full [&_h1]:-rotate-[17deg]">
@@ -131,6 +130,8 @@ Choose your  theme here ！
             </CardContent>
         </div>
       </Section>
+
+      <SpinGame></SpinGame>
     </div>
   )
 }

@@ -677,7 +677,11 @@ export default function SpinGame() {
                     </button>
                 </div>
 
-                <div className="roulette-spun-theme-popup-lower text-4xl sm:text-9xl md:text-9xl lg:text-9xl xl:text-6xl">
+                <div className="portrait:hidden roulette-spun-theme-popup-lower text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl">
+                    Seasons
+                </div>
+
+                <div className="landscape:hidden roulette-spun-theme-popup-lower text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                     Seasons
                 </div>
             </div>
