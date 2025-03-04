@@ -2,20 +2,20 @@ export default function Page() {
   return (
   <div className="overflow-hidden">
     <section className="relative min-h-screen flex flex-col items-center justify-start w-full h-full z-10">
-      <h1 className="text-8xl md:text-[9rem] text-center font-black">
+      <h1 className="text-8xl md:text-[6rem] text-center font-black">
         Our Mission
       </h1>
-      <p className="text-xl md:text-4xl text-center w-2/3 max-md:w-3/4 z-20">
+      <p className="text-xl md:text-2xl text-center w-2/3 max-md:w-3/4 z-20">
         To foster a community that encourages inclusiveness through raising awareness of the day-to-day realities faced by the visually impaired. Through a braille-based game, we connect the sighted with the visually impaired with a common language, developing empathy through shared experiences. 
       </p>
       <div className="items-center flex justify-center self-center z-10">
-        <div className="absolute left-1/4 transform -translate-x-1/2 bottom-0 md:bottom-44">
+        <div className="absolute left-1/4 transform -translate-x-1/2 bottom-[-2rem] md:bottom-[-5rem]">
           <img src="/about1.png" alt="About Card 1" sizes="150vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:rotate-6 transition-all duration-500" />
         </div>
-        <div className="absolute left-1/2 transform -translate-x-1/4 bottom-0 md:bottom-[15rem]">
+        <div className="absolute left-1/2 transform -translate-x-1/4 bottom-[3rem] md:bottom-[-0rem]">
           <img src="/about2.png" alt="About Card 2" sizes="150vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-translate-y-4 transition-all duration-500" />
         </div>
-        <div className="absolute right-1/4 transform translate-x-full bottom-0 md:bottom-44">
+        <div className="absolute right-1/4 transform translate-x-full bottom-[-2rem] md:bottom-[-5rem]">
           <img src="/about3.png" alt="About Card 3" sizes="150vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-rotate-6 transition-all duration-500" />
         </div>
       </div>

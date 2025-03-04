@@ -52,7 +52,7 @@ export default function Page() {
               <h1 className='text-2xl max-md:text-xl w-56 h-auto font-black text-center -rotate-[17deg]'>
                 Start the Round
               </h1>
-              <p className='text-xl max-md:text-sm max-md:w-80 md:w-[30rem] h-full font-black -rotate-[17deg] text-center pl-20 max-md:line-clamp-1'>
+              <p className='text-[0.52rem] md:text-lg w-[15rem] md:w-[25rem] h-full font-black -rotate-[17deg] text-center pl-10 md:pl-0 max-md:line-clamp-1'>
 Draw 2 word cards (simple for Level 1, standard for Level 2) and place them in the center.
 Teams decide who will play each round. Players put on blindfolds, and the regulator starts a 2-minute timer.
               Player Actions
@@ -85,14 +85,10 @@ Place the Braille letter cards (Braille side up) in the center.
       <Section>
         <div className="md:h-1/2 md:w-1/3 max-md:h-full max-md:w-full">
             <img src="/notebook.png" alt="NoteBook" className="absolute h-1/2 top-1/3 right-1/4 translate-x-1/2 md:w-auto md:h-auto max-md:h-1/3 max-md:w-auto -rotate-[17deg]" />
-            <CardContent className="h-1/2 top-[40%] right-1/4 absolute translate-x-1/2">
+            <CardContent className="h-1/2 top-[70%] right-[30%] absolute translate-x-1/2">
               <h1 className='text-6xl max-md:text-2xl w-20 h-auto font-black text-center -rotate-[17deg]'>
-                Participants
+                Planet
               </h1>
-              <p className='text-3xl max-md:text-sm max-md:w-56 md:w-96 h-full font-black -rotate-[17deg] text-center pl-20'>
-                Teams: 2 teams (e.g., Pink Team, Blue Team). Each team can have multiple players.
-                Regulator: 1 person to manage the game and assist players.
-              </p>
             </CardContent>
             <img src="/notebook.png" alt="NoteBook" className="absolute h-1/2 top-1/3 left-1/4 -translate-x-1/2 md:h-auto max-md:h-1/4 w-auto" />
             <CardContent className="h-1/2 max-md:top-[35%] md:top-[40%] left-1/4 md:left-1/4 absolute -translate-x-1/2">

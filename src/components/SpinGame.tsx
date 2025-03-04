@@ -430,7 +430,13 @@ export default function SpinGame() {
     $(document).on('mousemove', function(e:JQuery.MouseMoveEvent){
         const offset = $('.bg-black-container').offset();
 
-        $('.roulette-theme-name-div').css({'top': e.pageY - offset.top, 'left': e.pageX - offset.left});
+        // FIX ERROR BY IGNORE ERROR!!!
+        if (offset !== undefined){
+            $('.roulette-theme-name-div').css({'top': e.pageY - offset.top, 'left': e.pageX - offset.left});
+        } else {
+            $('.roulette-theme-name-div').css({'top': e.pageY, 'left': e.pageX});
+        }
+        
         // $('.roulette-theme-name-div').css({'top': e.clientY, 'left': e.clientX});
     });
 
