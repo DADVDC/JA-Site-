@@ -16,7 +16,6 @@ export default function Nav() {
         <Link href="/about">About us</Link>
         <Link href="/game">GAME PLAY</Link>
         <Link href="/lvup">Level-up Lounge</Link>
-        <Link href="/story">Story Hub</Link>
       </div>
 
       <div className="flex items-center space-x-8">
@@ -40,7 +39,6 @@ export default function Nav() {
               <DropdownMenuItem><Link href="/about">About us</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="/game">GAME PLAY</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="/lvup">Level-up Lounge</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="/story">Story Hub</Link></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
