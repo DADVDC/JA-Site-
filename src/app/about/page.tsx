@@ -10,13 +10,13 @@ export default function Page() {
       </p>
       <div className="items-center flex justify-center self-center z-10">
         <div className="absolute left-1/4 transform -translate-x-1/2 bottom-0 md:bottom-44">
-          <img src="/about1.png" alt="About Card 1" sizes="225vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:rotate-6 transition-all duration-500" />
+          <img src="/about1.png" alt="About Card 1" sizes="150vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:rotate-6 transition-all duration-500" />
         </div>
         <div className="absolute left-1/2 transform -translate-x-1/4 bottom-0 md:bottom-[15rem]">
-          <img src="/about2.png" alt="About Card 2" sizes="225vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-translate-y-4 transition-all duration-500" />
+          <img src="/about2.png" alt="About Card 2" sizes="150vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-translate-y-4 transition-all duration-500" />
         </div>
         <div className="absolute right-1/4 transform translate-x-full bottom-0 md:bottom-44">
-          <img src="/about3.png" alt="About Card 3" sizes="225vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-rotate-6 transition-all duration-500" />
+          <img src="/about3.png" alt="About Card 3" sizes="150vw" className="max-md:w-1/2 max-w-1/2 h-full w-full hover:-rotate-6 transition-all duration-500" />
         </div>
       </div>
       {/* <div className="absolute left-1/2 transform -translate-x-1/2 md:bottom-32 max-md:hidden"> */}
